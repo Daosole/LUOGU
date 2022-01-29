@@ -10,7 +10,7 @@ int main(void)
         printf("Normal");
     if (bmi >= 24)
     {
-        printf("%lg\n", bmi);
+        printf("%lg\n", bmi); // %g/%lg:   float/double去掉了尾随的0
         printf("Overweight");
     }
     return 0;
