@@ -3,10 +3,9 @@
 #include <stdio.h>
 int main(void)
 {
-    unsigned long n, f4, result; // f4 为 4 的阶乘
-    scanf("%ld", &n);
-    f4 = 4 * 3 * 2 * 1;
-    result = (n * (n - 1) * (n - 2) * (n - 3)) / f4;
-    printf("%ld\n", result);
+    unsigned long long n, result; // f4 为 4 的阶乘
+    scanf("%lld", &n);
+    result = n * (n - 1) / 2 * (n - 2) / 3 * (n - 3) / 4;
+    printf("%lld\n", result);
     return 0;
 }
