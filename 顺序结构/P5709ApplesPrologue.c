@@ -1,18 +1,20 @@
 #include <stdio.h>
 int main(void)
 {
-    unsigned m, t, s, n, m1;
+    unsigned m, t, s, n;
     int sum;
     scanf("%d %d %d", &m, &t, &s);
-    if (s == 0)
-        n = m;
+    if (t == 0)
+        n = 0;
     sum = m * t;
     if (sum <= s)
         n = 0;
     else
     {
-        m1 = s / t;
-        n = m - m1;
+        if (s % t == 0)
+            n = m - s / t;
+        else
+            n = m - s / t - 1;
     }
     printf("%d\n", n);
     return 0;
