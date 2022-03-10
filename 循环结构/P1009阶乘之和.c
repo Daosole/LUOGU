@@ -4,12 +4,12 @@ int main(void)
     long long fac(int x);
     int n, i;
     scanf("%d", &n);
-    long long sum = 0;
+    unsigned long long sum = 0;
     for (i = 1; i <= n; i++)
     {
         sum = sum + fac(i);
     }
-    printf("%lld", sum);
+    printf("%llu", sum);
     return 0;
 }
 long long fac(int x)
