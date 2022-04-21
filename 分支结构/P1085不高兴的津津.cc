@@ -3,22 +3,16 @@ using namespace std;
 
 int main(void)
 {
-    int i, j, max = 8, re, sum = 0;
-    int a[7][2];
+    int i, j, max = 8, re;
+    int a[7], b[7], c[7];
     for (i = 0; i < 7; i++)
     {
-        for (j = 0; j < 2; j++)
-        {
-            cin >> a[i][j];
-        }
+        cin >> a[i] >> b[i];
     }
     for (i = 0; i < 7; i++)
     {
-        for (j = 0; j < 2; j++)
-        {
-            sum += a[i][j];
-        }
-        if (sum >= 9)
+        c[i] = a[i] + b[i];
+        if (c[i] > max)
         {
             re = i + 1;
             break;
@@ -26,5 +20,4 @@ int main(void)
     }
     cout << re;
     return 0;
-
 }
