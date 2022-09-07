@@ -33,6 +33,8 @@ int prime(int a)
     int flag = 1;
     if (a == 0 || a == 1)
         flag = 0;
+    if (a == 2)
+        flag = 1;
     else {
         for (int i = 2; i * i <= a; i++) {
             if (a % i == 0) {
