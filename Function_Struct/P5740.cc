@@ -22,7 +22,7 @@ int main()
 
     int max = 0;
     for (int i = 0; i < n; i++) {
-        if (max < stu[i].sum) { // 使用 <= 而不是 < 来处理相同总分的情况
+        if (max < stu[i].sum) { 
             max = stu[i].sum;
         }
     }
@@ -33,6 +33,6 @@ int main()
                  << stu[i].math << " " << stu[i].eng;
             return 0;
         }
-    }
+    } // 以第一个达标的为准
 
 }
