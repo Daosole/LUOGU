@@ -1,5 +1,6 @@
 // 排序问题
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 // 选择排序算法
@@ -50,8 +51,9 @@ int main()
     for (int i = 0; i < m; i++) {
         cin >> arr[i]; // 输入选票
     }
-    selectSort(arr, m); // 使用选择排序
+    // selectSort(arr, m); // 使用选择排序
     // bubbleSort(arr, m); // 使用冒泡排序
+    sort(arr, arr+m);
     printArr(arr, m); // 打印排序后的数组
 
     return 0;
