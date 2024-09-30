@@ -1,27 +1,30 @@
-// 错误原因为 i 最小为 2。但是题目里没有保证 n≥2，所以，当 n≤2 时会出现错误。
+//
 #include <stdio.h>
 
 int main(void)
 {
     int judgePrime(int);
-    unsigned int n;
-    scanf("%d", &n);
-    if (n < 2) {
+    unsigned int L;
+    scanf("%d", &L);
+    if (L < 2) {
         printf("0\n");
-        return 0;
-    } else if (n == 2) {
-        printf("2\n1\n");
-        return 0;
     }
-    int sum = 0, count = 0;
-    for (int i = 2; i <= n; i++) {
-        if (judgePrime(i) == 1) {
-            sum += i;
-            count++;
-            printf("%d\n", i);
+    int sum = 0;
+    int count = 0;
+    int i = 2;
+    while (sum <= L) {
+        if (L == 2) {
+            printf("2\n");
+        } else {
+            
+            if (judgePrime(i) == 1) {
+                sum += i;
+                count++;
+                printf("%d\n", i);
+            }
+            
         }
-        if (sum >= n)
-            break;
+        i++;
     }
 
     printf("%d", count);
